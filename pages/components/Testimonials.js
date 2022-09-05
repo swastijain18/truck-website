@@ -76,10 +76,10 @@ const Testimonials = (props) => {
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={2000}
-        containerClass="carousel-container"
+        containerclassName="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={props.deviceType}
-        itemClass="carousel-item-padding-40-px"
+        itemclassName="carousel-item-padding-40-px"
       >
         {allDetails.map((e) => {
           return (

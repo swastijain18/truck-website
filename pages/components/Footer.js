@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       <hr />
 
-      <p class="text-center">
+      <p className="text-center">
         &copy; Copyright 2022 - Truck All rights reserved.
       </p>
    

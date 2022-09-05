@@ -10,6 +10,8 @@ const Banner = (props) => {
     const [type, settype] = useState('Load');
     const [from, setfrom] = useState();
     const [to, setto] = useState();
+    // const [tid, settid] = useState();
+    // const [fid, setfid] = useState();
 function getfrom(e){
         setfrom(e.target.value);
         submit(e.target.value,'from');
@@ -24,7 +26,6 @@ function gettype(e){
 const handleClick=()=>{
     let url = "http://localhost:3000/search/"+type+"?from="+from+"&to="+to
     Router.push(url);
-
 }
    
     return (
@@ -51,7 +52,8 @@ const handleClick=()=>{
                                                     className="form-control" list="from" onChange={getfrom} />
                                                 <datalist id="from">
                                                     {froml.map((e)=>{
-                                                      return(<option>{e.District},{e.State}</option>)
+                                                      return(<option key={e.id}
+                                                      >{e.District},{e.State}</option>)
                                                     })}
                                                 </datalist>
                                             </div>

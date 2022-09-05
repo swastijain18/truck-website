@@ -84,14 +84,25 @@
   width: 100%;
   margin-left: auto;
 }
-.box{
+.btns{
   text-align: end;
   color: white;
   background-color: #f36546;
-  width: 72px;
+  width: 120px;
   height: 40px;
+  margin-left: 149px;
+}
+
+.imgs{
   border-radius: 10%;
-  
+  box-shadow: 2px 2px 2px grey;
+}
+
+.imgsi{
+  border-radius: 10%;
+}
+.callb{
+  border-bottom: 1px solid grey;
 }
 
 

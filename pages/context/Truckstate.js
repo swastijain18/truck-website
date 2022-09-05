@@ -7,7 +7,7 @@ const Truckstate = (props) => {
 
     const [froml, setfroml] = useState([]) 
     const [tol, settol] = useState([]) 
-
+    
     const submit = (q,statusa) => {
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
