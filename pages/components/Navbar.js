@@ -1,3 +1,4 @@
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark navs" >
@@ -36,7 +37,7 @@ const Navbar = () => {
 
                 <button className="btn btn-cus my-2 my-sm-0 px-4 py-2 btnl"> <a
                     type="button" style={{ "color": "white", "textdecoration": "none" }}
-                    href="login.php">Login/SignUp</a></button>
+                    href="Login">Login/SignUp</a></button>
             </div>
         </nav>
     );

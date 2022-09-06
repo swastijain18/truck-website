@@ -125,3 +125,51 @@
 .styled-list:hover{
     color: orange;
 }
+
+.inps{
+  width: 23rem;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin: auto;
+  display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inps input[type=number] {
+  -moz-appearance: textfield;
+}
+.inpsotp{
+  width: 4rem;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin: auto;
+  display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inpsotp input[type=number] {
+  -moz-appearance: textfield;
+}
+.divs.my-5 {
+  margin-top: 10rem!important;
+  margin-bottom: 3rem!important;
+}
+.btnlogin{
+  background-color: #f36546;
+  color: white;
+  width: 200px;
+  font-size: 20px;
+}
+.photod{
+  background: url(./images/truck.jpg)  no-repeat center center;
+  width: 80%;
+  height: 100%;
+}

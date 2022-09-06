@@ -29,12 +29,12 @@ export default function Home() {
       </Head>
 
       <Truckstate>
-     <Navbar/>
+        <Navbar />
         <Banner />
         <HowWork />
         <About />
-        <LandingPartners/>
-        <Testimonials/>
+        <LandingPartners />
+        <Testimonials />
         <Faq />
         <Footer />
       </Truckstate>

@@ -6,7 +6,7 @@ import Router from 'next/router';
 
 const Banner = (props) => {
     const context = useContext(Truckcontext);
-    const {submit ,froml,tol} = context;
+    const {fetchlocation ,froml,tol} = context;
     const [type, settype] = useState('Load');
     const [from, setfrom] = useState();
     const [to, setto] = useState();
@@ -14,11 +14,11 @@ const Banner = (props) => {
     // const [fid, setfid] = useState();
 function getfrom(e){
         setfrom(e.target.value);
-        submit(e.target.value,'from');
+        fetchlocation(e.target.value,'from');
     }
 function getto(e){
         setto(e.target.value);
-        submit(e.target.value,'to');
+        fetchlocation(e.target.value,'to');
     }
 function gettype(e){
         settype(e.target.value);
