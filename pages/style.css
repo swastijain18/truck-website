@@ -173,3 +173,43 @@ input::-webkit-inner-spin-button {
   width: 80%;
   height: 100%;
 }
+
+.imgp{
+  position: absolute !important;
+  border-radius: 50%;
+
+}
+
+.inputwidth{
+  width: 400px;
+}
+
+.profilediv.mx-5 {
+  margin-right: 3rem!important;
+  margin-left: 9rem!important;
+}
+.fontawe{
+  border-radius: 5px;
+  width: 100px;
+  height: 80px;
+}
+
+#bottom-stuff {
+
+  position: relative;
+}
+
+#bottom{
+  position: absolute; 
+  width:100%;
+  bottom:20px;
+}
+
+@media screen and (max-height: 600px) {
+     sidenav{
+      transition: margin-left .5s;
+      display:none;
+     }
+}
+
+

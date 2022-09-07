@@ -2,6 +2,7 @@ import Head from 'next/Head'
 import React from 'react'
 import Navbar from './components/Navbar'
 import Script from "next/script";
+import Profile from './User/Profile';
 
 export const Otp = () => {
     return (
@@ -87,7 +88,7 @@ export const Otp = () => {
                         <div className="text-center">
                             <button className="btn btn-cus my-5 my-sm-0 px-4 py-2 bt btnlogin"> <a
                                 type="button" style={{ "textdecoration": "none" }}
-                                href="">Verify</a></button>
+                                href='./User/Profile'>Verify</a></button>
                         </div>
                     </div>
                 </div>

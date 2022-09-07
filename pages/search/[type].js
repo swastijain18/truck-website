@@ -3,7 +3,6 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
-import Truckcontext from "../context/Truckcontext";
 import React, {useContext} from 'react';
 import axios  from "axios";
 var FormData = require('form-data');
