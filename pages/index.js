@@ -12,7 +12,6 @@ import Navbar from "./components/Navbar";
 import Testimonials from "./components/Testimonials";
 import LandingPartners from "./components/LandingPartners";
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -29,12 +28,12 @@ export default function Home() {
       </Head>
 
       <Truckstate>
-     <Navbar/>
+        <Navbar />
         <Banner />
         <HowWork />
         <About />
-        <LandingPartners/>
-        <Testimonials/>
+        <LandingPartners />
+        <Testimonials />
         <Faq />
         <Footer />
       </Truckstate>

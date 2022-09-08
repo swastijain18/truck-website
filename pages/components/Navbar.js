@@ -18,7 +18,7 @@ const Navbar = () => {
                         <a className="nav-link mx-5 colr" href="about-us.php">About us</a>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle colr" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a className="nav-link dropdown-toggle colr mx-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul className="dropdown-menu">
