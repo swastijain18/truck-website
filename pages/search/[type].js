@@ -59,11 +59,11 @@ return (
               </div>
               <div className=" mx-2 my-3 ">
                 <div className=" btn my-3 btns">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <i class="fa-solid fa-phone"></i>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <i className="fa-solid fa-phone"></i>
                     </div>
-                    <div class="col-md-9">
+                    <div className="col-md-9">
                       <p className="calls text-center">Call Us</p>
                     </div>
                   </div>
@@ -100,11 +100,11 @@ return (
               </div>
               <div className=" mx-2 my-3 ">
                 <div className=" btn my-3 btns">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <i class="fa-solid fa-phone"></i>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <i className="fa-solid fa-phone"></i>
                     </div>
-                    <div class="col-md-9">
+                    <div className="col-md-9">
                       <p className="calls text-center">Call Us</p>
                     </div>
                   </div>

@@ -204,12 +204,72 @@ input::-webkit-inner-spin-button {
   width:100%;
   bottom:20px;
 }
+#burger{
+  position: absolute;
+  cursor: pointer;
+  left: 20%;
+  top: 2%;
+ width: 40px;
+}   
+.line{
+  background-color: white;
+  margin: 3px 3px;
+  color: white;
+  height: 8px;
+}
+#maincontainer{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+ }
+#sidenav{
+  position: relative;
+  width: 6%;
+  transition: 1s;
+ }
 
-@media screen and (max-height: 600px) {
-     sidenav{
-      transition: margin-left .5s;
-      display:none;
+#mainbox{
+  width: 94%;
+  padding-left: 100px;
+  transition: 1s;
+ }
+ .font-awe{
+  color: rgb(0, 0, 0);
+ }
+ .font-awed{
+  width: 37px;
+  height: 38px;
+ border-radius: 50%;
+ }
+ .font-awed:hover{
+ transform: rotate(360deg);
+transition: 500ms;
+ }
+ .colrs{
+  color: white;
+ }
+ #cross{
+  position: absolute;
+    cursor: pointer;
+    left: 80%;
+    top: 2%;
+    width: 40px;
+    display: none;
+ }
+@media screen and (max-width: 600px) {
+     #sidenav{
+      width: 200px;
      }
+    .w-class{
+      opacity: 0;
+    }
+    .profilediv.mx-5 {
+      margin-right: 0rem!important;
+      margin-left: 0rem!important;
+    }
+    .h-center{
+      text-align: center;
+    }
 }
 
 
