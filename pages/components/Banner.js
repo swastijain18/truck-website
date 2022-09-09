@@ -34,7 +34,7 @@ const handleClick=()=>{
                 <div className="container">
                     <div className="col-md-5">
                         <h1>Loading Walle</h1>
-                        <h5 className="desh2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, molestias.</h5>
+                        <h5 className="desh2">The company itself is a very successful company. Easy, fun. The company itself is a very successful company. For some, troubles. For some, troubles. For some, troubles. For some, troubles. For some, troubles. For some, trouble.</h5>
                     </div>
                     <div className="col-md-7">
                     </div>

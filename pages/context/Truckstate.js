@@ -31,8 +31,7 @@ const Truckstate = (props) => {
     
     return (
         <Truckcontext.Provider
-            value={{ tol, settol, froml, setfroml, fetchlocation }}
-        >
+            value={{ tol, settol, froml, setfroml, fetchlocation }}>
             {/* IT IS THE SYNTAX TO USE THE USECONTEXT API */}
             {props.children}
         </Truckcontext.Provider>

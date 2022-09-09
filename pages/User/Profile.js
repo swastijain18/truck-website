@@ -1,11 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Navbarp from './Navbarp'
-import { useContext } from 'react'
 import Head from "next/Head";
 import Script from "next/script";
-import Truckcontext from "../context/Truckcontext";
-import Truckstate from '../context/Truckstate';
 
 const Profile = (props) => {
     const openNav=()=>{
@@ -47,7 +44,7 @@ const closeNav =()=>{
                     </div>
                     <div className='text-center'>
                         <Image src="/profile.jpg" height={100} width={100} className="imgp" />
-                        <h4>Your Pic</h4>
+                        <i class="fa-solid fa-pen-to-square fonti"></i>
                     </div>
                     <div>
                         <form>
@@ -65,6 +62,13 @@ const closeNav =()=>{
                                 <datalist id="from">
                                     <option>Gurgaon</option>
                                 </datalist>
+                            </div>
+                            <div className="form-group my-3">
+                            <label htmlFor="email" className="form-label">Select Category</label>
+                                <select name="type" className="btn-primary form-control inputwidth">
+                                    <option value="Load">Truck Owner</option>
+                                    <option value="Lorry">Loads Owner</option>
+                                </select>
                             </div>
                             <div className="form-group my-3">
                             <label htmlFor="email" className="form-label">Select Category</label>

@@ -28,8 +28,8 @@ const Navbar = () => {
                     <li className="nav-item mx-5">
                         <a className="nav-link colr" href="#">Home</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link mx-5 colr" href="about-us.php">About us</a>
+                    <li className="nav-item mx-5">
+                        <a className="nav-link colr" href="about-us.php">About us</a>
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle colr" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

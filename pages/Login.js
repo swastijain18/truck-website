@@ -30,8 +30,16 @@ export const Login = () => {
                     WElCOME TO TRUCK
                 </h1>
               <h5 className="text-muted text-center my-3">Enter mobile number to continue and signup to truck</h5>
-              <div  className='my-5'>
-              <input type="number" className=" inps" id="number" aria-describedby="numberhelp"/>
+              <div class="d-flex justify-content-center">
+                <input type="text" className='inpn my-5' list='country'/>
+                <datalist id='country'>
+                  <option>+91</option>
+
+                </datalist>
+                <div  className='my-5 px-2'>
+                <input type="number" className=" inps" id="number" aria-describedby="numberhelp"/>
+                </div>
+
               </div>
               <div className="text-center">
               <button className="btn btn-cus my-5 my-sm-0 px-4 py-2 btnlogin"> <a

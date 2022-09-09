@@ -28,9 +28,13 @@
   width: 320px;
   height: 220px;
 }
-
+.btn:hover {
+  color: 0 !important;
+  background-color: #f36546 !important;
+  border-color: 0 !important;
+}
 .btnl{
-  background-color: grey;
+  background-color: #f36546;
   box-shadow:0 0 2px 2px 2px white;
 }
 .navs{
@@ -45,6 +49,9 @@
 }
 .colr{
   color: #4584ff;
+}
+.colr:hover{
+  font-weight: 400;
 }
 .widthh{
   position: absolute !important;
@@ -125,6 +132,32 @@
 .styled-list:hover{
     color: orange;
 }
+.inpn{
+  width: 4rem;
+  height: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  /* border: none;
+  border-bottom: 1px solid; */
+}
+.modal-backdrop {
+  --bs-backdrop-zindex: 1050;
+  --bs-backdrop-bg: rgb(240, 239, 239) !important;
+  --bs-backdrop-opacity: 0.6 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-backdrop-bg);
+}
+@media (min-width: 576px){
+.modal {
+    --bs-modal-margin: 12% !important;
+    --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+}
 
 .inps{
   width: 23rem;
@@ -133,6 +166,11 @@
   border: 1px solid grey;
   margin: auto;
   display: block;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  /* border: none;
+  border-bottom: 1px solid; */
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -256,20 +294,16 @@ transition: 500ms;
     width: 40px;
     display: none;
  }
+ .fonti{
+    position: relative;
+    left: -29px;
+    background-color: #ff8a29;
+    color: black;
+ }
 @media screen and (max-width: 600px) {
      #sidenav{
       width: 200px;
      }
-    .w-class{
-      opacity: 0;
-    }
-    .profilediv.mx-5 {
-      margin-right: 0rem!important;
-      margin-left: 0rem!important;
-    }
-    .h-center{
-      text-align: center;
-    }
 }
 
 
