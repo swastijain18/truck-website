@@ -10,6 +10,7 @@ var FormData = require('form-data');
 const search = () => {
   const router = useRouter();
   const q = router.query;
+  console.log(q);
 
   const findload = async () => {
     let headersList = {

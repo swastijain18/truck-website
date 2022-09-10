@@ -152,11 +152,23 @@
   height: 100vh;
   background-color: var(--bs-backdrop-bg);
 }
-@media (min-width: 576px){
 .modal {
-    --bs-modal-margin: 12% !important;
-    --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .inps{
@@ -187,6 +199,7 @@ input::-webkit-inner-spin-button {
   border: 1px solid grey;
   margin: auto;
   display: block;
+  text-align: center;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
