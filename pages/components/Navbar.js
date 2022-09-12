@@ -1,5 +1,11 @@
 import Head from "next/Head";
 import Script from "next/script";
+<<<<<<< HEAD
+=======
+import Router from "next/router";
+import AboutPage from "./AboutPage";
+
+>>>>>>> 44a27d1a72441de0242eb65ef1dc5511e32eea7a
 const Navbar = () => {
     return (
         <>
@@ -26,12 +32,17 @@ const Navbar = () => {
             <div className="collapse navbar-collapse anish justify-content-end mx-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto ml-auto">
                     <li className="nav-item mx-5">
-                        <a className="nav-link colr" href="#">Home</a>
+                        
+                        <a className="nav-link colr" href="/">Home</a>
                     </li>
                     <li className="nav-item mx-5">
+<<<<<<< HEAD
                         <a className="nav-link colr" href="about-us.php">About us</a>
+=======
+                        <a className="nav-link colr" href="/components/AboutPage">About</a>
+>>>>>>> 44a27d1a72441de0242eb65ef1dc5511e32eea7a
                     </li>
-                    <li className="nav-item dropdown">
+                    <li className="nav-item dropdown  mx-5">
                         <a className="nav-link dropdown-toggle colr" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>

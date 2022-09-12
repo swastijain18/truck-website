@@ -11,6 +11,8 @@ import HowWork from "./components/HowWork";
 import Navbar from "./components/Navbar";
 import Testimonials from "./components/Testimonials";
 import LandingPartners from "./components/LandingPartners";
+import Download from "./components/Download";
+import Advantages from "./components/Advantages";
 
 
 export default function Home() {
@@ -31,9 +33,15 @@ export default function Home() {
       <Truckstate>
         <Navbar />
         <Banner />
+        <LandingPartners />
         <HowWork />
         <About />
+<<<<<<< HEAD
         <LandingPartners />
+=======
+        <Advantages/>
+        <Download/>
+>>>>>>> 44a27d1a72441de0242eb65ef1dc5511e32eea7a
         <Testimonials />
         <Faq />
         <Footer />

@@ -3,6 +3,7 @@ import React from 'react'
 const HowWork = () => {
 return (
 <section className='mt-5'>
+    <h2 className='text-center' style={{marginTop: "5.5rem"}}>How We Works</h2>
     <div className='my-5 container d-flex justify-content-center'>
         <div className="col-md-4 mx-4 desc my-3">
             <i className="fa-solid fa-truck  my-1 fa-5x desi" style={{"width":"100%" , "textAlign":"center"}}></i>
