@@ -22,18 +22,18 @@ const Footer = () => {
         <div className="col-md-6 col-sm-12 col-lg-6">
             <ul style={{listStyleType:"none"}}>
                 <li><a href="#" className="styled-list">Home</a></li>
-                <li><a href="#" className="styled-list">About Us</a></li>
+                <li><a href="#" className="styled-list">About</a></li>
                 <li><a href="#" className="styled-list">Our Services</a></li>
-                <li><a href="#" className="styled-list">Contact</a></li>
+                <li><a href="#" className="styled-list">Contact Us</a></li>
                 
             </ul>
         </div>
       </div>
       <hr />
 
-      <p className="text-center">
+      <div className="text-center">
         &copy; Copyright 2022 - Truck All rights reserved.
-      </p>
+      </div>
    
     </div>
   );

@@ -12,11 +12,10 @@ const allImg = [
 
 const LandingPartners = () => {
   return (
-    <div className="container text-center my-5">
+    <div className="text-center my-5">
       <h2 className="my-3">Landing Partners</h2>
 
       <div className="land-maq">
-
 
         <Marquee velocity={10}>
           {allImg.map((e) => {

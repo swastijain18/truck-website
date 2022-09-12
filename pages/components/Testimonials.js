@@ -62,7 +62,7 @@ const allDetails = [
 
 const Testimonials = (props) => {
   return (
-    <div className="container text-center my-5 py-3 test-box">
+    <div className="text-center my-5 py-3 test-box">
       <h2 className="my-4">Testimonials</h2>
       <Carousel
         swipeable={true}
@@ -108,7 +108,7 @@ const Testimonials = (props) => {
         })}
 
       </Carousel>
-      ;
+      
     </div>
   );
 };
