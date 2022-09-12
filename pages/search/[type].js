@@ -3,19 +3,49 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import React, {useContext} from 'react';
+import axios  from "axios";
+var FormData = require('form-data');
 
 const search = () => {
   const router = useRouter();
   const q = router.query;
 
+  const findload = async () => {
+    let headersList = {
+      "Accept": "*/*",
+      "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+      "Authorization": "v6ZjakIAGV4tbwIy8Z1FKItPc7zk2aDpymg6T0B1",
+      "Accept": "application/json" 
+     }
+     
+     let formdata = new FormData();
+     formdata.append("user_id", "5");
+     formdata.append("from", q.from);
+     formdata.append("to", q.to);
+     formdata.append("truck_id", "1");
+     
+     let bodyContent =  formdata;
+     
+     let reqOptions = {
+       url: "https://truck.pantheondigitals.com/api/find-load",
+       method: "POST",
+       headers: headersList,
+       data: bodyContent,
+     }
+     
+     let response = await axios.request(reqOptions);
+     console.log(response.data);
+};
+  findload();
 return (
     <>
       <Head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous" />
       </Head>
-      <Navbar />
 
+      <Navbar />
       <section>
         <div className="row">
           <div className="card my-5 mx-5 col-md-5">
@@ -29,11 +59,11 @@ return (
               </div>
               <div className=" mx-2 my-3 ">
                 <div className=" btn my-3 btns">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <i class="fa-solid fa-phone"></i>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <i className="fa-solid fa-phone"></i>
                     </div>
-                    <div class="col-md-9">
+                    <div className="col-md-9">
                       <p className="calls text-center">Call Us</p>
                     </div>
                   </div>
@@ -70,11 +100,11 @@ return (
               </div>
               <div className=" mx-2 my-3 ">
                 <div className=" btn my-3 btns">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <i class="fa-solid fa-phone"></i>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <i className="fa-solid fa-phone"></i>
                     </div>
-                    <div class="col-md-9">
+                    <div className="col-md-9">
                       <p className="calls text-center">Call Us</p>
                     </div>
                   </div>
