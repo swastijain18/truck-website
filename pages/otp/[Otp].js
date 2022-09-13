@@ -4,6 +4,7 @@ import Script from "next/script";
 import Router from "next/router";
 import { useState ,useEffect } from "react";
 var FormData = require('form-data');
+import { setCookie } from 'cookies-next';
 import { useRouter } from 'next/router';
 
 export const Otp = () => {
@@ -28,10 +29,28 @@ const router = useRouter();
 
     fetch("https://truck.pantheondigitals.com/api/verifyotp", requestOptions)
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {console.log(result)
+        if(result.message == "Login successfull"){
+          
+      setCookie('user',result.data.user[0].id, {
+        path: "/",
+        maxAge: 3600, // Expires after 1hr
+        sameSite: true,
+      })
+          let url = "http://localhost:3000/User/Profile"
+          Router.push(url)
+      }else{
+        alert("Invalid credentails");
+      }
+
+      })
       .catch((error) => console.log("error", error));
 };
 
+const Redirect = (e) => {
+  e.preventDefault();
+  router.push(`/${data}`);
+};
   const [otp, setotp] = useState({
     value: "",
     otp1: "",
@@ -41,7 +60,7 @@ const router = useRouter();
     disable: true,
   });
   const handleChange = (value1, event) => {
-    setotp({ [value1]: event.target.value });
+    setotp({...otp, [value1]: event.target.value });
   };
   const inputfocus = (elmnt) => {
     if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
@@ -58,10 +77,6 @@ const router = useRouter();
         
       }
     }
-  };
-  const Nextpage = () => {
-    let url = "http://localhost:3000/User/Profile";
-    Router.push(url);
   };
   return (
     <>

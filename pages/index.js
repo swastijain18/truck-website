@@ -9,10 +9,14 @@ import Truckstate from "./context/Truckstate";
 import Banner from "./components/Banner";
 import HowWork from "./components/HowWork";
 import Navbar from "./components/Navbar";
+import cookie from "cookie"
 import Testimonials from "./components/Testimonials";
 import LandingPartners from "./components/LandingPartners";
 
 
+export function parseCookies(req) {
+  return cookie.parse(req ? req.headers.cookie || "" : document.cookie)
+}
 export default function Home() {
   return (
     <div className={styles.container}>
