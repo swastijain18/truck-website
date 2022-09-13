@@ -7,11 +7,11 @@ import Link from 'next/link'
 import Router from 'next/router'
 
 export const Login = () => {
+  const [concodes, setcodes] = useState();
 
   const handleChange=(e)=>{
     setnum(e.target.value)
   }
-  const [user, setuser] = useState();
   const [num, setnum] = useState();
   const login = () => {
     var myHeaders = new Headers();
@@ -31,12 +31,20 @@ export const Login = () => {
       )
       .catch((error) => console.log("error", error));
 };
+  const codes = () => {
+  
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
-
-useEffect(() => {
-
-}, [])
-
+    fetch("https://truck.pantheondigitals.com/api/country-code", requestOptions)
+      .then((response) => response.json())
+      .then((result) => console.log(result.data))
+      .catch((error) => console.log("error", error));
+      
+};
+codes();
   return (
     <>
       <Navbar />
@@ -53,7 +61,7 @@ useEffect(() => {
             <div className="d-flex justify-content-center">
               <input type="text" className="inpn my-5" list="country" />
               <datalist id="country">
-                <option>+91</option>
+                <option>{concodes}</option>
               </datalist>
               <div className="my-5 px-2">
                 <input

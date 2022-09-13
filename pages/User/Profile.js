@@ -5,18 +5,15 @@ import Navbarp from "./Navbarp";
 import Head from "next/Head";
 import Script from "next/script";
 import { useRef } from "react";
+import { getCookie } from "cookies-next";
+import  { useRouter } from "next/router";
 
-// import Modal from "./Modal";
-
-const Profile = (props) => {
-    const ref = useRef(null);
-    const refClose = useRef(null);
-    const name = () => {
-        refClose.current.click();
-        // const name = document.getElementById("name").value;
-        // console.log(name);
-        console.log("sagra");
-      };
+const Profile = () => {
+  const router = useRouter();
+  if(getCookie("user") === undefined){
+  router.push("../Login")
+  }
+  console.log();
   const openNav = () => {
     // if( document.getElementById('sidenav').style.width == "6%"){
     document.getElementById("sidenav").style.width = "20%";
@@ -70,93 +67,6 @@ const Profile = (props) => {
           <div></div>
         </div>
       </div>
-      <div
-    className="modal fade"
-    id="exampleModal"
-    tabIndex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div className="modal-dialog">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLabel">
-            Modal title
-          </h5>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div className="modal-body">
-          <div className="d-flex flex-column justify-content-center">
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Name
-              </label>
-              <input
-                type="text"
-                className="form-control inputwidth"
-                id="name"
-                aria-describedby="name"
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control inputwidth"
-                id="email"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="city" className="form-label">
-                Enter Your City
-              </label>
-              <input
-                type="text"
-                name="s"
-                className="form-control inputwidth"
-                list="from"
-              />
-              <datalist id="from">
-                <option>Gurgaon</option>
-              </datalist>
-            </div>
-            <div className="form-group my-3">
-              <label htmlFor="email" className="form-label">
-                Select Category
-              </label>
-              <select
-                name="type"
-                className="btn-primary form-control inputwidth"
-              >
-                <option value="Load">Truck Owner</option>
-                <option value="Lorry">Loads Owner</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div className="modal-footer">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            data-bs-dismiss="modal"
-            onClick={console.log(75)}
-          >
-            Close
-          </button>
-          <button type="button">
-           <a onClick={name}> Save changes</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
@@ -166,9 +76,6 @@ const Profile = (props) => {
         src="https://kit.fontawesome.com/c378079259.js"
         crossOrigin="anonymous"
       />
-      <Script src="https://code.jquery.com/jquery-3.6.1.js" />
-      <Script src="/myjs.js" crossorigin="anonymous" />
-      
     </>
   );
 };
