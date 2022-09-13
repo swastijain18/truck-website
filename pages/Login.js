@@ -1,38 +1,47 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Script from "next/script";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 var FormData = require('form-data');
 import Link from 'next/link'
 import Router from 'next/router'
 
 export const Login = () => {
-  const [concodes, setcodes] = useState();
+  const [concodes, setcodes] = useState([]);
 
-  const handleChange=(e)=>{
+  const handleChange = (e) => {
     setnum(e.target.value)
   }
-  const [num, setnum] = useState();
-  const login = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Accept", "application/json");
-    var formdata = new FormData();
-    formdata.append("mobile", num);
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: formdata,
-      redirect: "follow",
-    };
+  const [num, setnum] = useState("");
 
-    fetch("https://truck.pantheondigitals.com/api/login", requestOptions)
-      .then((response) => response.json())
-      .then((result) => Router.push("/otp/"+result.user_id)
-      )
-      .catch((error) => console.log("error", error));
-};
-  const codes = () => {
-  
+
+  const login = () => {
+    if ((num.length > 9) && (concodes != "")) {
+
+      var myHeaders = new Headers();
+      myHeaders.append("Accept", "application/json");
+      var formdata = new FormData();
+      formdata.append("mobile", num);
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: formdata,
+        redirect: "follow",
+      };
+
+      fetch("https://truck.pantheondigitals.com/api/login", requestOptions)
+        .then((response) => response.json())
+        .then((result) => Router.push("/otp/" + result.user_id)
+        )
+        .catch((error) => console.log("error", error));
+    }
+    else {
+      alert("Enter Valid Number with country code")
+    }
+  };
+
+
+  useEffect(() => {
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -40,11 +49,12 @@ export const Login = () => {
 
     fetch("https://truck.pantheondigitals.com/api/country-code", requestOptions)
       .then((response) => response.json())
-      .then((result) => console.log(result.data))
+      .then((result) => setcodes(result.data))
       .catch((error) => console.log("error", error));
-      
-};
-codes();
+
+  }, [])
+
+  // console.log(concodes);
   return (
     <>
       <Navbar />
@@ -59,9 +69,14 @@ codes();
               Enter mobile number to continue and signup to truck
             </h5>
             <div className="d-flex justify-content-center">
-              <input type="text" className="inpn my-5" list="country" />
+              <input type="text" className="inpn my-5" name="code" list="country" required />
               <datalist id="country">
-                <option>{concodes}</option>
+                {concodes.map((e) => {
+                  return (
+                    <option>{e}</option>
+                  )
+                })}
+
               </datalist>
               <div className="my-5 px-2">
                 <input
@@ -79,7 +94,7 @@ codes();
             <div className="text-center">
               <button className="btn btn-cus my-5 my-sm-0 px-4 py-2 btnlogin" id="btlogin" onClick={login}>
                 <a type="button" style={{ textdecoration: "none" }}>
-                  Send Otp
+                  Send OTP
                 </a>
               </button>
             </div>
@@ -97,7 +112,7 @@ codes();
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossOrigin="anonymous"
       />
-   </>
+    </>
   )
 }
 export default Login;
