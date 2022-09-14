@@ -2,13 +2,13 @@ import Accordion from "react-bootstrap/Accordion";
 
 const Faq = () => {
   return (
-    <div className="container my-5">
+    <div className="faq-box">
       <div>
         <h2 className="mb-5 text-center">FAQ's</h2>
 
         <div className="row my-3" >
           <div className="col-md-4"><b>Delivery</b></div>
-          <div className="col-md-8">
+          <div className="col">
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Accordion Item</Accordion.Header>

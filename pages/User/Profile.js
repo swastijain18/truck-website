@@ -1,18 +1,17 @@
 import React from "react";
-import Image from "next/image";
+import Router from "next/router";
+import Image from "next/Image";
+import { useRouter } from "next/router";
 import Navbarp from "./Navbarp";
 import Head from "next/Head";
 import Script from "next/script";
-import { useRef } from "react";
 import { getCookie } from "cookies-next";
-import  { useRouter } from "next/router";
 
-const Profile = () => {
-  const router = useRouter();
-  if(getCookie("user") === undefined){
-  router.push("../Login")
-  }
-  console.log();
+const Profile = (props) => {
+  // const router = useRouter();
+  // if(getCookie("user") === undefined){
+  // router.push("../Login")
+  // }
   const openNav = () => {
     // if( document.getElementById('sidenav').style.width == "6%"){
     document.getElementById("sidenav").style.width = "20%";
@@ -52,7 +51,7 @@ const Profile = () => {
         </div>
         <div id="mainbox">
           <div className="my-2">
-            <h2 className="h-center">My Profile</h2>
+            <h2 class="h-center text-center">Profile</h2>
           </div>
           <div className="text-center">
             <Image
@@ -63,7 +62,24 @@ const Profile = () => {
             />
             <i className="fa-solid fa-pen-to-square fonti"></i>
           </div>
-          <div></div>
+          <div>
+            <div class="card" style={{ width: "100%" }}>
+              <div class="card-body">
+                <h5 class="card-title text-center fa-2x">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">
+                  Card link
+                </a>
+                <a href="#" class="card-link">
+                  Another link
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Script
