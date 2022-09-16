@@ -4,7 +4,7 @@ const Faq = () => {
   return (
     <div className="faq-box">
       <div>
-        <h2 className="mb-5 text-center">FAQ's</h2>
+        <h1 className="mb-5 text-center">FAQ's</h1>
 
         <div className="row my-3" >
           <div className="col-md-4"><b>Delivery</b></div>

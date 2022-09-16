@@ -2,9 +2,9 @@ const Download = () => {
     return (
         <div>
             <section>
-                <div class="text-center p-5" style={{ backgroundColor: "#fdc6a1" }}>
+                <div class="text-center p-5 back">
                     <div class="d-flex justify-content-center">
-                        <h2 style={{ lineHeight: "1.2rem", color: " #4e4eff" }}>
+                        <h2 style={{ lineHeight: "1.2rem", color: " #163673" }}>
                             <b>Get Your Goods Transported Safely</b>
                         </h2>
                     </div>

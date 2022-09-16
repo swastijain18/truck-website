@@ -27,35 +27,35 @@ const allDetails = [
     Name: "Swasti Jain",
     Location:"Jaipur",
     Img: "/truck.jpg",
-    Text: "Some quick example text to build on the card title",
+    Text: "Some quick example text to build on the card title Some quick example text to build on the card title",
     Rating: "4",
   },
   {
     Name: "John",
     Location:"Pune",
     Img: "/img.jpg",
-    Text: "Some quick example text to build on the card title",
+    Text: "Some quick example text to build on the card title Some quick example text to build on the card title",
     Rating: "4",
   },
   {
     Name: "Swasti Jain",
     Location:"Delhi",
     Img: "/truck.jpg",
-    Text: "Some quick example text to build on the card title",
+    Text: "Some quick example text to build on the card title Some quick example text to build on the card title",
     Rating: "4",
   },
   {
     Name: "Rohan Jain",
     Location:"Uttar Pradesh",
     Img: "/img.jpg",
-    Text: "xjbcjbc  qsagdhahxnak assjhadj",
+    Text: "xjbcjbc  qsagdhahxnak assjhadj Some quick example text to build on the card title",
     Rating: "4",
   },
   {
     Name: "John",
     Location:"Assam",
     Img: "/img.jpg",
-    Text: "On the other hand, we denounce with righteous indignation and dislike",
+    Text: "On the other hand, we denounce with righteous indignation and dislike Some quick example text to build on the card title",
     Rating: "4",
   },
 ];
@@ -63,11 +63,11 @@ const allDetails = [
 const Testimonials = (props) => {
   return (
     <div className="text-center my-5 py-3 test-box">
-      <h2 className="my-4">Testimonials</h2>
+      <h1 className="my-4">Testimonials</h1>
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
@@ -77,7 +77,7 @@ const Testimonials = (props) => {
         customTransition="all .5"
         transitionDuration={2000}
         containerclassName="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={["tablet", "mobile","desktop"]}
         deviceType={props.deviceType}
         itemclassName="carousel-item-padding-40-px"
       >
@@ -85,24 +85,23 @@ const Testimonials = (props) => {
           return (
             <div
               className="p-4 m-3 test-card"
-          
             >
-              <div className="d-flex">
+              <div className="d-flex justify-content-center test-img">
                 <Image
                   src={e.Img}
-                  width={50}
-                  height={50}
+                  width={70}
+                  height={70}
                   alt="Picture of the author"
-                  style={{borderRadius:"50%"}}
+                  style={{borderRadius:"50%", marginTop:"1rem"}}
+                  
                 />
-                <div className="mx-3">
-                  <div><b>{e.Name}</b></div>
-                  <div>{e.Location}</div>
+              </div>
+              <div className="my-3">
+                  <h4><b>{e.Name}</b></h4>
                   
                 </div>
-              </div>
-              <div className="card-text my-3">{e.Text}</div>
-              <div>{e.Rating} Stars</div>
+              <div className="card-text my-3 mx-4">{e.Text}</div>
+              {/* <div><b>{e.Rating} </b>Stars</div> */}
             </div>
           );
         })}

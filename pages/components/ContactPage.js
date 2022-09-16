@@ -21,7 +21,7 @@ const ContactPage = () => {
             title: "Location",
             content: "Get Personalized Help, Contact Us By Filling The Form!",
         },
-        
+
 
     ]
 
@@ -83,8 +83,7 @@ const ContactPage = () => {
                                         <input type="text" required="required" />
                                         <span>Name</span>
                                     </div>
-                                </div>
-                                <div class="input-group">
+
                                     <div class="input">
                                         <input type="text" required="required" />
                                         <span>E-mail</span>
@@ -118,7 +117,7 @@ const ContactPage = () => {
                 })}
 
             </div>
-            
+
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14022.992226681426!2d77.1981701!3d28.5172269!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x60863f370d4750c4!2sPantheon%20digital!5e0!3m2!1sen!2sin!4v1662980430786!5m2!1sen!2sin" width="100%" height="300" allowfullscreen="" loading="lazy" style={{ marginTop: "1rem" }} referrerpolicy="no-referrer-when-downgrade"></iframe>
             <Footer />
         </div>

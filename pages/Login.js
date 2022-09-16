@@ -101,7 +101,7 @@ export const Login = () => {
             <div className="text-center my-3">
               <p>
                 By providing my phone number,I hereby agree the{" "}
-                <a style={{ color: " #f36546" }}>terms of services</a>
+                <a style={{ color: " #F76545" }}>terms of services</a>
               </p>
             </div>
           </div>

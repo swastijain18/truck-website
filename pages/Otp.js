@@ -87,7 +87,7 @@ export const Otp = () => {
                         </div>
                         <div className='text-center my-3'>
                             <p>
-                                Didn't recieve Otp code <a style={{ "color": " #f36546", "textDecorationLine": "underline  " }}>Resend Code in </a>
+                                Didn't recieve Otp code <a style={{ "color": " #F76545", "textDecorationLine": "underline  " }}>Resend Code in </a>
                             </p>
                         </div>
                         <div className="text-center">

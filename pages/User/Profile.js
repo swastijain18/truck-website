@@ -6,6 +6,7 @@ import Head from "next/Head";
 import Script from "next/script";
 import { getCookie } from 'cookies-next';
 
+
 const Profile = (props) => {
     const router = useRouter();
     if(getCookie("user") === undefined){

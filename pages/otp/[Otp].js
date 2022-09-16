@@ -159,7 +159,7 @@ const Redirect = (e) => {
                 Didn't recieve Otp code{" "}
                 <a
                   style={{
-                    color: " #f36546",
+                    color: " #F76545",
                     textDecorationLine: "underline  ",
                   }}
                 >

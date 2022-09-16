@@ -13,7 +13,7 @@ const allImg = [
 const LandingPartners = () => {
   return (
     <div className="text-center my-5">
-      <h2 className="my-3">Landing Partners</h2>
+      <h1 className="my-3">Landing Partners</h1>
 
       <div className="land-maq">
 

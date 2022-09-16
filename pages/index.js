@@ -13,6 +13,7 @@ import Testimonials from "./components/Testimonials";
 import LandingPartners from "./components/LandingPartners";
 import Download from "./components/Download";
 import Advantages from "./components/Advantages";
+import Comp from "./components/Comp";
 
 
 export function parseCookies(req) {
@@ -37,10 +38,11 @@ export default function Home() {
       <Truckstate>
         <Navbar />
         <Banner />
-        <LandingPartners />
         <HowWork />
         <About />
         <Advantages/>
+        <Comp/>
+        <LandingPartners />
         <Download/>
         <Testimonials />
         <Faq />

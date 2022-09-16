@@ -1,3 +1,7 @@
+body h1{
+  color: #163673;
+}
+
 .heading {
   position: absolute;
   top: 13rem;
@@ -27,7 +31,7 @@
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  background-color: #f36546;
+  background-color: #F76545;
   color: white;
 }
 
@@ -43,7 +47,7 @@
 
 /* advantages */
 .light {
-  background-color: lavender;
+  background-color: #d0daed;
   padding: 1.5rem 2rem;
 }
 
@@ -54,12 +58,20 @@
 }
 
 .light h4 {
-  color: #f36546;
+  color: #F76545;
 }
 
 .dark h4 {
-  color: #f36546;
+  color: #F76545;
 }
+.back{
+  background-image: url("/wave.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem 5rem;
+}
+
 
 /* TESTIMONIALS */
 .test-box {
@@ -70,19 +82,25 @@
 }
 
 .test-card {
-  background-color: lavender;
-  text-align: left;
-  box-shadow: 4px 4px 20px lavender;
-  width: 320px;
-  height: 220px;
+  background-image: url("/test-back.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  text-align: center;
+  /* box-shadow: 4px 4px 20px lavender; */
+  width: 100%;
+  height: 22rem;
+}
+.test-img{
+  margin-top: 2rem !important;
 }
 .btn:hover {
   color: 0 !important;
-  background-color: #f36546 !important;
+  background-color: #F76545 !important;
   border-color: 0 !important;
 }
 .btnl {
-  background-color: #f36546;
+  background-color: #F76545;
   box-shadow: 0 0 2px 2px 2px white;
 }
 .navs {
@@ -97,9 +115,11 @@
 }
 .colr {
   color: #4584ff;
+  font-weight: bold;
+  font-size: 18px;
 }
 .colr:hover {
-  font-weight: 400;
+  color: #F76545;
 }
 .widthh {
   position: absolute !important;
@@ -108,6 +128,11 @@
   left: 40% !important;
   margin-bottom: 121px !important;
 }
+
+/* ----------------------- */
+
+
+/* faq section */
 .faq-box {
   min-height: 65vh;
   margin: 4rem;
@@ -147,7 +172,7 @@
 .btns {
   text-align: end;
   color: white;
-  background-color: #f36546;
+  background-color: #F76545;
   width: 120px;
   height: 40px;
   margin-left: 149px;
@@ -263,7 +288,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 3rem !important;
 }
 .btnlogin {
-  background-color: #f36546;
+  background-color: #F76545;
   color: white;
   width: 200px;
   font-size: 20px;
@@ -365,10 +390,10 @@ input::-webkit-inner-spin-button {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
-.contact{
+.contact {
   margin: 20px;
-  background-color: lavender;
-  border: lavender;
+  background-color: #d0daed;
+  border: #d0daed;
 }
 
 * {
@@ -395,9 +420,8 @@ input::-webkit-inner-spin-button {
   background-color: #fff;
   position: relative;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  padding: 10px;
   border-radius: 10px;
-  font-family: "Poppins", sans-serif;
+  margin-top: 0rem;
   overflow: hidden;
   cursor: pointer;
   margin-bottom: 4rem;
@@ -425,8 +449,8 @@ input::-webkit-inner-spin-button {
 }
 
 .top h3 {
- margin-top: 2rem;
- margin-bottom: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .medium {
@@ -637,11 +661,8 @@ input::-webkit-inner-spin-button {
 }
 
 input[type="text"] {
-  
   box-sizing: border-box;
   outline: 0;
- 
-  
 }
 
 .input {
@@ -676,59 +697,10 @@ input[type="text"] {
   font-weight: 700;
   font-size: 13px;
 }
-
-.right-side .radio {
-  position: relative;
+.right-side {
+  margin-top: 2rem;
+  text-align: center;
 }
-
-.right-side .radio input:nth-child(1) {
-  position: absolute;
-  top: 240px;
-  left: -225px;
-}
-
-.right-side .radio p:nth-child(2) {
-  top: 239px;
-  left: -205px;
-  font-size: 11px;
-}
-
-.right-side .radio input:nth-child(3) {
-  position: absolute;
-  top: 240px;
-  left: -115px;
-}
-
-.right-side .radio p:nth-child(4) {
-  top: 239px;
-  left: -95px;
-  font-size: 11px;
-}
-
-.right-side .radio input:nth-child(5) {
-  position: absolute;
-  top: 240px;
-  left: 30px;
-}
-
-.right-side .radio p:nth-child(6) {
-  top: 239px;
-  left: 55px;
-  font-size: 11px;
-}
-
-.right-side .radio input:nth-child(7) {
-  position: absolute;
-  top: 240px;
-  left: 160px;
-}
-
-.right-side .radio p:nth-child(8) {
-  top: 239px;
-  left: 180px;
-  font-size: 11px;
-}
-
 .centered {
   display: flex;
   align-items: center;
@@ -855,6 +827,120 @@ input[type="radio"]:checked + label:after {
   cursor: pointer;
 }
 
+/* how we works */
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+.card {
+  z-index: 0;
+  background-color: #eceff1;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border-radius: 10px;
+}
+.top {
+  padding-top: 40px;
+  /* padding-left: 13% !important;
+  padding-right: 13% !important; */
+}
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #455a64;
+  padding-left: 0px;
+  margin-top: 30px;
+}
+#progressbar li {
+  list-style-type: none;
+  font-size: 13px;
+  width: 20%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+#progressbar .step0:before {
+  font-family: FontAwesome;
+  content: "\f10c";
+  color: #fff;
+}
+#progressbar li:before {
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  background: #d0daed;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0px;
+}
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 12px;
+  background: #d0daed;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: -1;
+}
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  left: -50%;
+}
+#progressbar li:nth-child(2):after,
+#progressbar li:nth-child(3):after,
+#progressbar li:nth-child(4):after {
+  left: -50%;
+}
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  left: 50%;
+}
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #163673;
+}
+#progressbar li.active:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+.icon {
+  width: 90px;
+  height: 60px;
+}
+.icon-content {
+  padding-bottom: 20px;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+
+@media screen and (max-width: 992px) {
+  .icon-content {
+    width: 50%;
+  }
+}
+/* ------------------- */
+
+@media screen and (max-width: 992px) {
+  .icon-content {
+    width: 50%;
+  }
+}
 @media (max-width: 750px) {
   .input {
     width: 100%;

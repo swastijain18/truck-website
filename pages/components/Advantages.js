@@ -3,8 +3,8 @@ const Advantages = () => {
         <div style={{marginBottom:"6rem"}}>
             <div className='text-center' >
 
-                <h2 style={{ marginTop: "3.5rem", marginBottom: "1rem" }}>Advantages</h2>
-                <p>The company itself is a very successful company. Easy, fun. The company itself is a </p>
+                <h1 style={{ marginTop: "3.5rem", marginBottom: "1rem" }}>Advantages</h1>
+                <h5>The company itself is a very successful company. Easy, fun. The company itself is a </h5>
             </div>
 
             <div className="d-flex mt-5 flex-wrap">
