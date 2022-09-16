@@ -3,21 +3,34 @@ import Navbar from "./components/Navbar";
 import Script from "next/script";
 import { useState, useEffect } from "react";
 var FormData = require('form-data');
-import Link from 'next/link'
 import Router from 'next/router'
+import { getCookie } from "cookies-next";
+import nextConfig from "../next.config";
 
 export const Login = () => {
   const [concodes, setcodes] = useState([]);
-
   const handleChange = (e) => {
     setnum(e.target.value)
   }
   const [num, setnum] = useState("");
+  useEffect(() => {
+    if(getCookie("user") === undefined){
+   
+   }else{
+    Router.push("User/Profile");
+   }
+   var requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
 
-
+  fetch(nextConfig.env.APP_URL+"api/country-code", requestOptions)
+    .then((response) => response.json())
+    .then((result) => setcodes(result.data))
+    .catch((error) => console.log("error", error));
+ }, [])
   const login = () => {
-    if ((num.length > 9) && (concodes != "")) {
-
+    if ((num.length > 9) && ( document.getElementById("ccodes").value != "")) {
       var myHeaders = new Headers();
       myHeaders.append("Accept", "application/json");
       var formdata = new FormData();
@@ -28,8 +41,7 @@ export const Login = () => {
         body: formdata,
         redirect: "follow",
       };
-
-      fetch("https://truck.pantheondigitals.com/api/login", requestOptions)
+      fetch(nextConfig.env.APP_URL+"api/login", requestOptions)
         .then((response) => response.json())
         .then((result) => Router.push("/otp/" + result.user_id)
         )
@@ -39,21 +51,6 @@ export const Login = () => {
       alert("Enter Valid Number with country code")
     }
   };
-
-
-  useEffect(() => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch("https://truck.pantheondigitals.com/api/country-code", requestOptions)
-      .then((response) => response.json())
-      .then((result) => setcodes(result.data))
-      .catch((error) => console.log("error", error));
-
-  }, [])
-
   // console.log(concodes);
   return (
     <>
@@ -69,7 +66,7 @@ export const Login = () => {
               Enter mobile number to continue and signup to truck
             </h5>
             <div className="d-flex justify-content-center">
-              <input type="text" className="inpn my-5" name="code" list="country" required />
+              <input type="text" className="inpn my-5" id="ccodes" name="code" list="country" required value="+91" />
               <datalist id="country">
                 {concodes.map((e) => {
                   return (

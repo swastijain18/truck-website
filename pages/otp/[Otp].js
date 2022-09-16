@@ -2,14 +2,21 @@ import Head from "next/Head";
 import React from "react";
 import Script from "next/script";
 import Router from "next/router";
-import { useState ,useEffect } from "react";
-var FormData = require('form-data');
-import { setCookie } from 'cookies-next';
-import { useRouter } from 'next/router';
-import Modal from "../User/Modal";
+import { useState, useEffect } from "react";
+var FormData = require("form-data");
+import { setCookie, getCookie } from "cookies-next";
+import { useRouter } from "next/router";
+import nextConfig from "../../next.config";
 
 export const Otp = () => {
-const router = useRouter();
+  useEffect(() => {
+    if(getCookie("user") === undefined){
+   
+   }else{
+    Router.push("User/Profile");
+   }
+ }, []) 
+  const router = useRouter();
   const q = router.query;
 
   const verifyotp = () => {
@@ -18,10 +25,11 @@ const router = useRouter();
 
     var formdata = new FormData();
     formdata.append("user_id", q.Otp);
-    var val = formdata.append("otp", `${otp.otp1}`+`${otp.otp2}`+`${otp.otp3}`+`${otp.otp4}`);
-   
+    var val = formdata.append(
+      "otp",
+      `${otp.otp1}` + `${otp.otp2}` + `${otp.otp3}` + `${otp.otp4}`
+    );
 
-  
     // console.log(`${otp.otp1}`+`${otp.otp2}`+`${otp.otp3}`+`${otp.otp4}`);
     var requestOptions = {
       method: "POST",
@@ -30,30 +38,29 @@ const router = useRouter();
       redirect: "follow",
     };
 
-    fetch("https://truck.pantheondigitals.com/api/verifyotp", requestOptions)
+    fetch(nextConfig.env.APP_URL+"api/verifyotp", requestOptions)
       .then((response) => response.json())
-      .then((result) => {console.log(result)
-        if(result.message == "Login successfull"){
-          
-      setCookie('user',result.data.user[0].id, {
-        path: "/",
-        maxAge: 3600, // Expires after 1hr
-        sameSite: true,
-      })
-          let url = "http://localhost:3000/User/Profile"
-          Router.push(url)
-      }else{
-        alert("Invalid credentails");
-      }
-
+      .then((result) => {
+        console.log(result);
+        if (result.message == "Login successfull") {
+          setCookie("user", result.data.token, {
+            path: "/",
+            maxAge: 60 * 60 * 24, // Expires after 1day
+            sameSite: true,
+          });
+          if( result.data.user[0].new_user == 0){
+          let url = "http://localhost:3000/User/Profile";
+          Router.push(url);
+          }else{
+               Router.push("../User/Modal")
+          }
+        } else {
+          alert("Invalid credentails");
+        }
       })
       .catch((error) => console.log("error", error));
-};
-
-const Redirect = (e) => {
-  e.preventDefault();
-  router.push(`/${data}`);
-};
+    };
+   
   const [otp, setotp] = useState({
     value: "",
     otp1: "",
@@ -63,21 +70,19 @@ const Redirect = (e) => {
     disable: true,
   });
   const handleChange = (value1, event) => {
-    setotp({...otp, [value1]: event.target.value });
+    setotp({ ...otp, [value1]: event.target.value });
   };
   const inputfocus = (elmnt) => {
     if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
       const next = elmnt.target.tabIndex - 2;
       if (next > -1) {
         elmnt.target.form.elements[next].focus();
-        
       }
     } else {
       // console.log("next");
       const next = elmnt.target.tabIndex;
       if (next < 4) {
         elmnt.target.form.elements[next].focus();
-        
       }
     }
   };
@@ -168,15 +173,18 @@ const Redirect = (e) => {
               </p>
             </div>
             <div className="text-center">
-              
-                <a type="button" style={{ textdecoration: "none" }} onClick={verifyotp}>
-                <button
+              <a
                 type="button"
-                className="btn btn-cus my-5 my-sm-0 px-4 py-2 bt btnlogin primary"
+                style={{ textdecoration: "none" }}
+               
               >
-                  Verify</button>
-                </a>
-              
+                <button
+                  type="button"
+                  className="btn btn-cus my-5 my-sm-0 px-4 py-2 bt btnlogin primary" onClick={verifyotp}
+                >
+                  Verify
+                </button>
+              </a>
             </div>
           </div>
         </div>

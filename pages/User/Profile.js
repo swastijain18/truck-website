@@ -1,17 +1,44 @@
 import React from "react";
 import Router from "next/router";
 import Image from "next/Image";
-import { useRouter } from "next/router";
 import Navbarp from "./Navbarp";
 import Head from "next/Head";
 import Script from "next/script";
 import { getCookie } from "cookies-next";
+import Modal from "./Modal";
+import { useState ,useEffect } from "react";
+import nextConfig from "../../next.config";
 
-const Profile = (props) => {
-  // const router = useRouter();
-  // if(getCookie("user") === undefined){
-  // router.push("../Login")
-  // }
+
+const Profile = () => {
+  useEffect(() => {
+    if(getCookie("user") === undefined){
+   Router.push("../Login")
+   }else{
+    profile();
+   }
+ }, [])
+  const [users, setuser] = useState({});
+  const profile = () => {
+   var myHeaders = new Headers();
+   myHeaders.append("Accept", "application/json");
+   myHeaders.append(
+     "Authorization",
+     "Bearer 4|C8aSyCbFEQcnBtZmLGvW3HXWj3LeZoid5kNJR2M5"
+   );
+   var requestOptions = {
+     method: "GET",
+     headers: myHeaders,
+     redirect: "follow",
+   };
+ 
+   fetch("api/profile", requestOptions)
+     .then((response) => response.json())
+     .then((result) => setuser(result.user))
+     .catch((error) => console.log("error", error));
+ };
+ 
+
   const openNav = () => {
     // if( document.getElementById('sidenav').style.width == "6%"){
     document.getElementById("sidenav").style.width = "20%";
@@ -65,8 +92,8 @@ const Profile = (props) => {
           <div>
             <div class="card" style={{ width: "100%" }}>
               <div class="card-body">
-                <h5 class="card-title text-center fa-2x">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <h5 class="card-title text-center fa-2x">{users.name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{users.mobile}</h6>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -82,6 +109,7 @@ const Profile = (props) => {
           </div>
         </div>
       </div>
+      <Modal/>
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
