@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       <hr />
 
-      <div className="text-center">
+      <div className="text-center pb-2" style={{fontSize:"13px", color:"grey"}}>
         &copy; Copyright 2022 - Truck All rights reserved.
       </div>
    

@@ -4,8 +4,61 @@
         margin-left: 1rem;
         text-align: left;
     }
-    .test-card{
-        
+    .head-banner{
+       text-align: center;
+       padding: 2rem 1rem;
     }
+    .head-banner .blue-btn{
+        margin-bottom: 20px;
+    }
+    
 }
+
+@media screen and (max-width: 992px) {
+    .icon-content {
+      width: 50%;
+    }
+  }
+  @media (max-width: 750px) {
+    .input {
+      width: 100%;
+    }
+  
+    .container .card {
+      max-width: 350px;
+    }
+  
+    .container .card .right-side {
+      width: 100%;
+      display: none;
+    }
+  
+    .container .card .left-side {
+      width: 100%;
+    }
+  
+    .input-group {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #sidenav {
+      width: 200px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
+  }
+  @media (min-width: 576px) {
+    .modal {
+      --bs-modal-margin: 12% !important;
+      --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+  }
 

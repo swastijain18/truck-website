@@ -79,24 +79,14 @@ const ContactPage = () => {
                         <div class="right-side">
                             <div class="card-details">
                                 <div class="input-group">
-                                    <div class="input">
-                                        <input type="text" required="required" />
-                                        <span>Name</span>
-                                    </div>
 
-                                    <div class="input">
-                                        <input type="text" required="required" />
-                                        <span>E-mail</span>
-                                    </div>
-                                    <div class="input">
-                                        <input type="text" required="required" />
-                                        <span>Phone no.</span>
-                                    </div>
-                                    <div class="input">
-                                        <input type="text" required="required" />
-                                        <span>Message</span>
-                                    </div>
+                                    <input class="input" type="text" placeholder="Name" required="required" />
 
+                                    <input class="input" type="text" placeholder="E-mail" required="required" />
+
+                                    <input class="input" type="text" placeholder="Phone No" required="required" />
+
+                                    <input class="input" type="text" placeholder="Message" required="required" />
                                 </div>
                             </div>
 
@@ -108,7 +98,7 @@ const ContactPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-flex justify-content-center mx-5">
+            <div className="d-flex justify-content-center flex-wrap mx-lg-5">
 
                 {allCard.map((e) => {
                     return (

@@ -1,7 +1,6 @@
 import Head from "next/Head";
 import Script from "next/Script";
 import styles from "../styles/Home.module.css";
-import About from "./components/About";
 import Faq from "./components/Faq's";
 import Footer from "./components/Footer";
 import Truckstate from "./context/Truckstate";
@@ -14,6 +13,7 @@ import LandingPartners from "./components/LandingPartners";
 import Download from "./components/Download";
 import Advantages from "./components/Advantages";
 import Comp from "./components/Comp";
+import About from "./components/About";
 
 
 export function parseCookies(req) {
@@ -32,14 +32,14 @@ export default function Home() {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
       </Head>
 
       <Truckstate>
         <Navbar />
         <Banner />
         <HowWork />
-        <About />
+        <About/>
         <Advantages/>
         <Comp/>
         <LandingPartners />

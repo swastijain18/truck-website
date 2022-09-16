@@ -28,8 +28,7 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse anish justify-content-end mx-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto ml-auto">
-                    <li className="nav-item mx-5">
-                        
+                    <li className="nav-item mx-5">                       
                         <a className="nav-link colr" href="/">Home</a>
                     </li>
                     <li className="nav-item mx-5">
