@@ -21,8 +21,6 @@ const ContactPage = () => {
             title: "Location",
             content: "Get Personalized Help, Contact Us By Filling The Form!",
         },
-
-
     ]
 
 
@@ -57,23 +55,6 @@ const ContactPage = () => {
                                 </button>
 
 
-                            </div>
-
-
-                            <div class="last">
-                                <span>
-                                    <i class="fa fa-facebook-f"></i>
-                                </span>
-                                <span>
-                                    {" "}
-                                    <i class="fa fa-twitter"></i>
-                                </span>
-                                <span>
-                                    <i class="fa fa-instagram"></i>
-                                </span>
-                                <span>
-                                    <i class="fa fa-linkedin"></i>
-                                </span>
                             </div>
                         </div>
                         <div class="right-side">

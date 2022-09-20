@@ -1,4 +1,5 @@
 import Image from "next/Image";
+import Advantages from "./Advantages";
 import Footer from "./Footer";
 import HowWork from "./HowWork";
 import Navbar from "./Navbar";
@@ -21,6 +22,7 @@ const AboutPage = () => {
         </div>
 
         <HowWork/>
+        <Advantages/>
         <Footer/>
         </div>
     );

@@ -11,7 +11,21 @@
     .head-banner .blue-btn{
         margin-bottom: 20px;
     }
-    
+    .faq-box{
+      margin: 1rem;
+    }
+    .ser-low{
+      padding: 20px;
+    }
+    .ser-text2 div{
+      font-size: 13px;
+    }
+    .service1{
+      margin: 1rem 0rem;
+    padding: 1rem;
+    padding-bottom: 0px;
+    text-align: left !important;
+    }
 }
 
 @media screen and (max-width: 992px) {

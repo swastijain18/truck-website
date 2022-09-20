@@ -18,6 +18,18 @@ body h1{
 .why-card {
   box-shadow: 2px 2px 20px rgb(218, 218, 218);
 }
+.left-head::before{
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  z-index: -1;
+  width: 140px;
+  position: absolute;
+  /* background: url("1.jpg"); */
+}
 
 /* LANDING PAGE SECTION */
 .land-maq {
@@ -33,16 +45,12 @@ body h1{
   padding: 10px 20px;
   background-color: #F76545;
   color: white;
+  font-weight: bold;
 }
 
-.button1 a:hover {
-  text-decoration: none;
 
-  color: #4e4eff;
-}
-
-.button1:hover {
-  color: #4e4eff;
+.button1 a {
+  color: white;
 }
 
 /* advantages */
@@ -134,7 +142,6 @@ body h1{
 
 /* faq section */
 .faq-box {
- 
   margin: 4rem;
 }
 .accord{
@@ -156,12 +163,16 @@ body h1{
 
 .head-banner{
   padding: 5rem 1rem;
-  /* background-image: linear-gradient(160deg, #eb7c34, #faa56d, #4bbdff); */
-  background-color: #a7dfff;
+  /* background-color: #a7dfff; */
+  background-image: url("/b1.jpg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .head-banner h1{
   font-weight: bolder;
+  /* color: white !important; */
 }
 .blue-btn{
   border-color: #163673;
@@ -197,7 +208,10 @@ body h1{
   height: 40px;
   margin-left: 149px;
 }
-
+.find-btn{
+  color: white;
+  background-color: #F76545;
+}
 .imgs {
   border-radius: 10%;
   box-shadow: 2px 2px 2px grey;
@@ -210,17 +224,34 @@ body h1{
   border-bottom: 1px solid grey;
 }
 
+.book-btn{
+  padding: 0.5rem 2rem;
+  border: 0.7px solid #ff7f63;
+  background-color: white;
+  border-radius: 7px;
+  color: #F76545;
+  font-weight: bold;
+  text-decoration: none;
+}
+.book-btn:hover{
+  background-color: #F76545;
+  color: white;
+}
+.book-btn a:hover{
+  color: white;
+}
+
 /* About Page */
 .ab{
   background-color: #d0daed;
 }
 
-
+/* ----------------- */
 
 /* FOOTER SECTION */
 .footer-box {
-  /* background-color: #a7dfff; */
-  background-image: linear-gradient(#a7dfff, #6dc5f8, #3fb1f3);
+  background-color: #abbee3;
+  /* background-image: linear-gradient(#e2eaf9, #abbee3, #7391c9); */
 }
 
 .styled-list {
@@ -405,6 +436,32 @@ input::-webkit-inner-spin-button {
   color: black;
 }
 
+/* services page */
+.ser-top {
+  background-color: #163673;
+  padding: 2rem 2.5rem;
+  
+}
+.ser-text1{
+  color: white;
+  display: block;
+  margin: auto;
+}
+.ser-low{
+  padding: 2rem 2.5rem;
+}
+.ser-text2{
+  color: #163673;
+  display: block;
+  margin: auto;
+}
+.service1{
+  margin: 1rem 0rem;
+  padding: 2rem 7rem;
+  padding-bottom: 0px
+}
+/* ---------------- */
+
 /* contact page */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
@@ -456,7 +513,7 @@ input::-webkit-inner-spin-button {
 
 .container .card .left-side {
   width: 45%;
-  background-color: #aeaef3;
+  background-color: #90a9d9;
   height: 100%;
   border-radius: 10px;
   position: relative;
@@ -635,7 +692,7 @@ input::-webkit-inner-spin-button {
 .left-side::before {
   content: "";
   position: absolute;
-  background-color: #fa949d;
+  background-color: #ff7f63;
   height: 270px;
   width: 270px;
   bottom: -120px;
@@ -646,7 +703,7 @@ input::-webkit-inner-spin-button {
 .left-side::after {
   content: "";
   position: absolute;
-  background-color: #7e53f9;
+  background-color: #163673;
   height: 120px;
   width: 120px;
   bottom: 50px;
@@ -685,9 +742,11 @@ input[type="text"] {
 .input-group .input {
   position: relative;
   margin-bottom: 13px;
- width: 80%;
+  width: 80%;
   padding: 5px 10px;
-  border: 0.5PX SOLID;
+  /* border: 0.5PX SOLID; */
+  background-color: #ecf3ff;
+  border: none;
   border-radius: 7px !important ;
 }
 

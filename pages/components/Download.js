@@ -17,13 +17,13 @@ const Download = () => {
                         </b>
                     </div>
 
-                    <button class="button1 mx-2" type="submit">
+                    <button class="button1 mx-2 my-4" type="submit">
                        
                         <a type="button" href="#">
                             Download App
                         </a>
                     </button>
-                    <button class="button1 mx-2">
+                    <button class="book-btn mx-2">
                         <a href="#">Contact</a>
                     </button>
                 </div>

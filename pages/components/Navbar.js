@@ -28,20 +28,22 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse anish justify-content-end mx-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto ml-auto">
-                    <li className="nav-item mx-5">                       
+                    <li className="nav-item mx-4">                       
                         <a className="nav-link colr" href="/">Home</a>
                     </li>
-                    <li className="nav-item mx-5">
+                    <li className="nav-item mx-4">
                         <a className="nav-link colr" href="/components/AboutPage">About</a>
                     </li>
-                    <li className="nav-item mx-5">
-                        <a className="nav-link colr" href="/components/Services">Services</a>
+                    <li className="nav-item mx-4">
+                        <a className="nav-link colr" href="/components/Service">Services</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link mx-4 colr " href="/components/Blog">Blogs</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link mx-4 colr " href="/components/ContactPage">Contact</a>
                     </li>
                     
-
-                    <li className="nav-item">
-                        <a className="nav-link mx-5 colr " href="/components/ContactPage">Contact Us</a>
-                    </li>
                 </ul>
 
                 <button className="btn btn-cus my-2 my-sm-0 px-4 py-2 btnl"> <a
