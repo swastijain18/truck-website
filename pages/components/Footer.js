@@ -27,7 +27,7 @@ const Footer = () => {
 
           </ul>
           <ul className="col-md-6 col-sm-12 col-lg-4" style={{ listStyleType: "none" }}>
-            <li><a href="/components/Blog" className="styled-list">Blogs</a></li>
+            <li><a href="/components/blog" className="styled-list">Blogs</a></li>
             <li><a href="#" className="styled-list">Privacy policy</a></li>
             <li><a href="#" className="styled-list">Term and Conditions</a></li>
           </ul>

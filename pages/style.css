@@ -154,8 +154,6 @@ body h1{
 }
 
 .styf {
-  /* margin-top: -10px; */
-  /* width: 500px; */
   box-shadow: 2px 2px 10px grey;
   border-radius: 15px;
   padding: 1.5rem;
@@ -163,7 +161,6 @@ body h1{
 
 .head-banner{
   padding: 5rem 1rem;
-  /* background-color: #a7dfff; */
   background-image: url("/b1.jpg");
   background-position: 100%;
   background-repeat: no-repeat;
@@ -172,7 +169,6 @@ body h1{
 
 .head-banner h1{
   font-weight: bolder;
-  /* color: white !important; */
 }
 .blue-btn{
   border-color: #163673;
@@ -243,10 +239,30 @@ body h1{
 
 /* About Page */
 .ab{
-  background-color: #d0daed;
+  background-color: #163673;
+  padding: 0rem 4rem;
+}
+.ab-right{
+  display: block;
+  margin: auto;
 }
 
 /* ----------------- */
+
+.comp{
+  display: block;
+  margin: auto;
+}
+
+/* blog page */
+.blog-container{
+  background-color: #163673;
+  padding: 2rem 4rem;
+  color: white;
+}
+
+/* ------------ */
+
 
 /* FOOTER SECTION */
 .footer-box {

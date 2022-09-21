@@ -32,29 +32,8 @@ const Banner = (props) => {
     return (
         <>
             <section >
-                {/* <div style={{ marginTop: "-48px" }}>
-
-                    <Image src="/red-truck.jpg" width={1300} height={450} alt="truck" style={{ width: "100%", opacity: "0.3" }} />
-                    <div className='heading'>
-
-                        <h1 >Reduce Your Telecom Costs by Switching to the Cloud </h1>
-                        <h5 className="desh2">Streamline all of your business practises, from the Customer Relationship to the Sales to Project management and billing together with a solitary resolution.</h5>
-                    </div>
-
-                </div> */}
-
-
                 <div className='row head-banner'>
-
-                    {/* photo for mobile view */}
-                    {/* <div className='col-lg-5 col-sm-12 d-block d-sm-none'>
-                        <Image src="/red-truck.jpg" width={1300} height={450} alt="truck" style={{ width: "100%", height: "100%" }} />
-                    </div> */}
-                    {/* ---------------------- */}
-
-
                     <div className='col-lg-5 col-sm-12 mx-lg-5 text-left left-head'>
-
 
                         <h1>Reduce Your Telecom Costs by Switching to the Cloud </h1>
                         <h5 className='my-4'>Streamline all of your business practises, from the Customer Relationship to the Sales to Project management .</h5>
@@ -63,11 +42,6 @@ const Banner = (props) => {
                             type="button" style={{ "color": "white", "textdecoration": "none" }}
                             href="/">Download App</a></button>
                     </div>
-
-                    <div className='col-lg-5 col-sm-12 d-none d-lg-block'>
-                        {/* <Image src="/red-truck.jpg" width={1300} height={450} alt="truck" style={{ width: "100%", height: "100%" }} /> */}
-                    </div>
-
                 </div>
 
                 <div className="searchdiv">
